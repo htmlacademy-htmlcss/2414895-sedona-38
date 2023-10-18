@@ -12,8 +12,7 @@
       <div class="container">
         <nav class="navigation">
           <a href="index.html" class="logo-link">
-            <span class="visually-hidden">Логотип г.Седона</span>
-            <img src="images/logo.svg" width="138" height="64" alt="Логотип г.Седона">
+            <img src="images/logo.svg" width="140" height="70" alt="Логотип г.Седона">
           </a>
           <ul class="navigation-list">
             <li class="navigation-item">
@@ -103,13 +102,17 @@
               </fieldset>
               <fieldset class="catalog-filter-group price">
                 <legend class="catalog-filter-title">Стоимость, ₽:</legend>
-                  <label class="cost-selection">От
+                <div class="price-container">
+                  <label class="cost-selection">
+                    <span>от</span>
                     <input type="number" value="0">
                   </label>
-                  <label class="cost-selection">до
+                  <label class="cost-selection">
+                    <span>до</span>
                     <input type="number" value="9000">
                   </label>
                   <button type=""></button>
+              </div>
               </fieldset>
               <div class="catalog-filter-buttons">
                 <button class="filter-button button-second button" type="submit">Применить</button>
@@ -127,19 +130,19 @@
           </select>
           <ul class="view-list">
             <li class="view-item view-1">
-              <button class="button active">
+              <a href="#" class="button active">
                 <img src="images/catalog-view-1.svg" width="16" height="14" alt="Отображение списка гостинниц: плитка">
-              </button>
+              </a>
             </li>
             <li class="view-item view-2">
-              <button class="button">
+              <a href="#" class="button">
                 <img src="images/catalog-view-2.svg" width="16" height="14" alt="Отображение списка гостинниц: слайдшоу">
-              </button>
+              </a>
             </li>
             <li class="view-item view-3">
-              <button class="button">
+              <a href="#" class="button">
                 <img src="images/catalog-view-3.svg" width="16" height="14" alt="Отображение списка гостинниц: список">
-              </button>
+              </a>
             </li>
           </ul>
         </div>
@@ -257,7 +260,7 @@
       <section class="subscribe subscribe-inner" data-test="subscribe">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
         <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form action="https://echo.htmlacademy.ru/" method="post">
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <input class="subscribe-input" type="text" name="subcribe-email" placeholder="Ваш e-mail" required>
           <button class="subscribe-button button-second button" type="submit">Подписаться</button>
         </form>

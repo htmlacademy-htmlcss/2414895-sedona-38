@@ -14,6 +14,12 @@
   font-display: swap;
 }
 
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
 html {
   height: 100%;
 }
@@ -27,7 +33,6 @@ body {
   color: #333333;
   background-color: #f2f2f2;
   margin: 0;
-  box-sizing: border-box;
 }
 
 .page-container {
@@ -66,6 +71,13 @@ body {
 
 .logo-link {
   margin-right: 28px;
+  z-index: 1;
+}
+
+.logo-link img {
+  display: block;
+  margin-right: 28px;
+  margin-bottom: -6px;
 }
 
 .navigation-list {
@@ -96,7 +108,7 @@ body {
   padding: 20px 16px;
 }
 
-.navigation-user:not(:last-child) .navigation-link {
+.navigation-user .navigation-link:not(.button) {
   padding: 22px 12px;
 }
 
@@ -106,7 +118,7 @@ body {
 
 .favorites-cnt {
   position: absolute;
-  right: 8px;
+  right: 4px;
   top: 8px;
   width: 20px;
   height: 20px;
@@ -128,7 +140,6 @@ body {
   border: none;
 }
 
-
 .button-standart {
   background-color: #756157;
 }
@@ -145,6 +156,7 @@ body {
   font-size: 16px;
   line-height: 20px;
   padding: 8px 34px;
+  margin: 14px 20px;
 }
 
 .hero {
@@ -153,13 +165,14 @@ body {
   background-image: url("../images/background.svg"), url("../images/index-background.jpg");
   background-position: bottom, center;
   background-repeat: no-repeat;
-  background-size: cover, cover;
+  background-size: contain, cover;
+  padding: 51px 0;
 }
 
 .hero-image {
   display: block;
-  padding: 51px 0;
   margin: 0 auto;
+  object-fit: contain;
 }
 
 .advantages-container {
@@ -197,7 +210,6 @@ body {
   width: 400px;
   min-height: 385px;
   padding: 112px 85px;
-  box-sizing: border-box;
 }
 
 .advantages-item.big-item {
@@ -211,7 +223,10 @@ body {
   width: 400px;
   min-height: 385px;
   padding: 102px 85px;
-  box-sizing: border-box;
+}
+
+.big-item img {
+  object-fit: cover;
 }
 
 .advantages-item.big-item:last-child .advantages-item-part {
@@ -282,7 +297,6 @@ body {
   width: 400px;
   min-height: 385px;
   padding: 183px 85px 81px;
-  box-sizing: border-box;
 }
 
 .service-item-title {
@@ -395,6 +409,12 @@ body {
 
 .subscribe-index .subscribe-description {
   color: #ffffff;
+}
+
+.subscribe-form {
+  display: grid;
+  width: 684px;
+  grid-template-columns: auto min-content;
 }
 
 .subscribe-input {
@@ -554,17 +574,58 @@ body {
   color: #ffffff;
 }
 
-.catalog-filter-item .cost-selection {
+.price-container {
+  display: grid;
+  gap: 36px 2px;
+  grid-template-columns: repeat(2, 143px);
+}
+
+.price-container button {
+  grid-column: 1/-1;
+}
+
+.price-container .cost-selection {
+  display: flex;
+  flex-direction: column;
+  position: relative;
   font-size: 18px;
   line-height: 24px;
+}
+
+.cost-selection span {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.cost-selection input {
+  font-weight: 700;
+  padding: 12px 20px;
   color: #000000;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.cost-selection:nth-child(1) input {
+  border-radius: 4px 0 0 4px;
+}
+
+.cost-selection:nth-child(2) input {
+  border-radius: 0 4px 4px 0;
+}
+
+.catalog-filter-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 32px;
 }
 
 .filter-button {
   font-size: 16px;
   line-height: 20px;
   padding: 8px 50px;
-
 }
 
 .button-clean {
@@ -591,9 +652,15 @@ body {
   margin: 0;
 }
 
-.sort-select option {
+.sort-select {
+  display: flex;
+  justify-content: space-between;
+  width: 292px;
+  border-radius: 4px;
+  border: 2px solid #e5e5e5;
   padding: 14px 20px;
   font-family: inherit;
+  margin: 0 70px 0 auto;
 }
 
 .view-list {
@@ -606,6 +673,9 @@ body {
 }
 
 .view-item .button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 48px;
   height: 48px;
   border: 2px solid #e5e5e5;
@@ -629,7 +699,6 @@ body {
 }
 
 .card-item {
-  box-sizing: border-box;
   width: 340px;
   padding: 20px;
   border: 1px solid #e6e6e6;
@@ -643,6 +712,10 @@ body {
   color: #000000;
   text-decoration: none;
   margin-bottom: 16px;
+}
+
+.card-link img {
+  object-fit: cover;
 }
 
 .card-title {
@@ -732,7 +805,9 @@ body {
 }
 
 .pagination-link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 60px;
   height: 60px;
   font-size: 20px;
