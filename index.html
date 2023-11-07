@@ -16,7 +16,7 @@
             </a>
             <ul class="navigation-list">
               <li class="navigation-item">
-                <a href="index.html" class="navigation-link" aria-current="page">Главная</a>
+                <a href="index.html" class="navigation-link active" aria-current="page">Главная</a>
               </li>
               <li class="navigation-item">
                 <a href="#" class="navigation-link">О Седоне</a>
@@ -148,6 +148,68 @@
           </a>
         </div>
       </footer>
+      <div class="modal-container modal-container-close">
+        <div class="modal modal-auth">
+          <section class="modal-content">
+            <h2 class="modal-title">Поиск гостиницы в Седоне</h2>
+            <button class="modal-close-button">
+              <span class="visually-hidden">Закрыть</span>
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14.4905 1.78288L13.1982 0.49057L7.49048 6.19826L1.78279 0.49057L0.490479 1.78288L6.19817 7.49057L0.490479 13.1983L1.78279 14.4906L7.49048 8.78288L13.1982 14.4906L14.4905 13.1983L8.78279 7.49057L14.4905 1.78288Z" fill="black"/>
+              </svg>
+            </button>
+            <form action="https://echo.htmlacademy.ru/" method="post" class="modal-form">
+              <label for="arrival-date" class="modal-label">Дата заезда:</label>
+              <input class="modal-input date" type="text" name="arrival-date" id="arrival-date" value="27 апреля 2020" placeholder="Укажите дату">
+              <span class="modal-error">Мы не можем отправить вас в прошлое.</span>
+              <label for="departure-date" class="modal-label">Дата выезда:</label>
+              <input class="modal-input date" type="text" name="departure-date" id="departure-date" value="1 сентября 2023" placeholder="Укажите дату">
+              <span class="modal-description">На эти даты есть свободные номера. Пока есть.</span>
+              <label for="cnt-adult" class="modal-label label-cnt">Взрослые:</label>
+              <div class="modal-cnt-button">
+                <button class="modal-control-button button-minus">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9V11H17V9H3Z" fill="black"/>
+                  </svg>
+                </button>
+                <input class="modal-input cnt" type="number" name="cnt-adult" id="cnt-adult" value="2" max="99">
+                <button class="modal-control-button button-plus">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="black"/>
+                  </svg>
+                </button>
+              </div>
+              <span class="modal-label label-cnt label-cnt-child">
+                <label for="cnt-child" class="modal-label label-cnt label-cnt-child">Дети:</label>
+                <span class="tooltip">
+                  <button class="tooltip-toggle" type="button" aria-labelledby="tooltip-label-date">
+                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9.39307 4H11.3931V6H9.39307V4ZM11.3931 16H9.39307V7H11.3931V16Z" fill="black"/>
+                    </svg>
+                  </button>
+                  <span class="tooltip-text" role="tooltip" id="tooltip-label-date">
+                    Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.
+                  </span>
+                </span>
+              </span>
+              <div class="modal-cnt-button">
+                <button class="modal-control-button button-minus">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 9V11H17V9H3Z" fill="black"/>
+                  </svg>
+                </button>
+                <input class="modal-input cnt" type="number" name="cnt-child" id="cnt-child" value="2" max="99">
+                <button class="modal-control-button button-plus">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17 9H11V3H9V9H3V11H9V17H11V11H17V9Z" fill="black"/>
+                  </svg>
+                </button>
+              </div>
+              <button type="submit" class="model-button-submit">Найти</button>
+            </form>
+          </section>
+        </div>
+      </div>
     </div>
   </body>
 </html>
