@@ -105,7 +105,7 @@ body {
 .navigation-list .navigation-link:hover,
 .navigation-list .navigation-link:focus {
   text-decoration: underline #756257 solid 2px;
-  text-underline-offset: 20px;
+  text-underline-offset: 23px;
 }
 
 .navigation-user .navigation-link:hover,
@@ -129,11 +129,16 @@ body {
 
 .navigation-link.active {
   text-decoration: underline #756257 solid 2px;
-  text-underline-offset: 20px;
+  text-underline-offset: 23px;
 }
 
 .navigation-user .navigation-link {
-  padding: 22px 12px;
+  padding: 20px 12px;
+  display: flex;
+}
+
+.navigation-user .navigation-link svg {
+  margin-top: 13px;
 }
 
 .navigation-item .favorites {
@@ -214,8 +219,8 @@ body {
 .navigation .button {
   font-size: 16px;
   line-height: 20px;
-  width: 160px;
-  margin: 14px 20px;
+  min-width: 160px;
+  margin: 14px 0 14px 20px;
 }
 
 .hero {
@@ -248,7 +253,7 @@ body {
 }
 
 .advantages-container {
-  padding: 69px 274px;
+  padding: 69px 250px;
   margin-bottom: 21px;
 }
 
@@ -461,14 +466,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 96px 258px;
+  padding: 96px 258px 104px;
 }
 
 .subscribe-index {
   background-color: #547ea3;
   background-image: url("../images/Subscribe.jpg");
-  background-position: center center;
   background-repeat: no-repeat;
+  background-position: -30px center;
   background-size: cover;
 }
 
@@ -491,7 +496,7 @@ body {
   line-height: 26px;
   text-align: center;
   margin: 0;
-  margin-bottom: 54px;
+  margin-bottom: 55px;
 }
 
 .subscribe-index .subscribe-description {
@@ -525,9 +530,8 @@ body {
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: 40px 70px 30px;
+  margin: 42px 70px 30px;
 }
 
 .social-list {
@@ -536,16 +540,17 @@ body {
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 0;
+  margin-right: 180px;
   padding: 0;
   list-style-type: none;
 }
 
 .social-link {
   display: flex;
-  flex-direction: center;
+  justify-content: center;
   align-items: center;
   width: 47px;
-  height: 40px;
+  height: 47px;
 }
 
 .social-link:hover path,
@@ -578,6 +583,7 @@ body {
 
 .logo-htmlacademy {
   width: 115px;
+  margin-left: auto;
 }
 
 .logo-htmlacademy:hover path,
@@ -865,7 +871,7 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 35px 70px 70px;
+  padding: 35px 70px 72px;
 }
 
 .main-inner-title {
@@ -884,7 +890,7 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
 }
 
 .breadcrumbs-item:not(:first-child) {
@@ -902,15 +908,15 @@ body {
 .breadcrumbs-item:not(:first-child)::before {
   content: "";
   position: absolute;
-  width: 8px;
-  height: 17px;
+  width: 6px;
+  height: 9px;
   left: -18px;
   bottom: 50%;
   transform: translateY(50%);
   background-image: url("../images/arroy.svg");
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   line-height: 21px;
 }
 
@@ -951,7 +957,7 @@ body {
   width: 20px;
   height: 20px;
   margin: 0;
-  margin-right: 16px;
+  margin-right: 11px;
   cursor: pointer;
 }
 
@@ -962,7 +968,7 @@ body {
   width: 20px;
   height: 20px;
   margin: 0;
-  margin-right: 16px;
+  margin-right: 11px;
   cursor: pointer;
 }
 
@@ -985,7 +991,7 @@ body {
   background-image: url("../images/radio-point.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 12px 10px;
+  background-size: 13px 10px;
 }
 
 .filter-form .housing-type {
@@ -1031,10 +1037,11 @@ body {
   color: #ffffff;
   padding: 0;
   margin-bottom: 32px;
+  text-transform: capitalize;
 }
 
 .catalog-filter-item:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 }
 
 .catalog-filter-item input {
@@ -1044,7 +1051,7 @@ body {
 
 .price-container {
   display: grid;
-  gap: 36px 2px;
+  gap: 44px 2px;
   grid-template-columns: repeat(2, 143px);
 }
 
@@ -1168,7 +1175,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 40px;
+  margin-bottom: 36px;
 }
 
 .sort p {
@@ -1258,25 +1265,25 @@ body {
   flex-direction: column;
   gap: 16px;
   width: 340px;
-  padding: 20px;
+  padding: 20px 19px;
   border: 1px solid #e6e6e6;
 }
 
 .card-link {
-  display: block;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 28px;
-  color: #000000;
   text-decoration: none;
 }
 
 .card-link img {
+  display: block;
   object-fit: cover;
 }
 
 .card-title {
   margin: 0;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 28px;
+  color: #000000;
 }
 
 .card-description {
@@ -1308,6 +1315,7 @@ body {
 .card-raiting-stars {
   display: inline-block;
   background-image: url("../images/star.svg");
+  background-repeat: space;
   height: 17px;
   margin: 0;
 }
@@ -1317,19 +1325,19 @@ body {
 }
 
 .two-stars {
-  width: 36px;
+  width: 42px;
 }
 
 .three-stars {
-  width: 54px;
+  width: 66px;
 }
 
 .four-stars {
-  width: 72px;
+  width: 89px;
 }
 
 .five-stars {
-  width: 90px;
+  width: 107px;
 }
 
 .card-raiting-number {
